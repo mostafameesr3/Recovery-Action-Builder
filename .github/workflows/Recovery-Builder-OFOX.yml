@@ -143,6 +143,16 @@ jobs:
           echo "Warning: No specific makefile found, using default twrp_${{ github.event.inputs.DEVICE_NAME }}"
         fi
 
+    - name: Cherry-pick custom OrangeFox recovery commit
+      run: |
+        cd ${GITHUB_WORKSPACE}/OrangeFox/fox_${{ inputs.MANIFEST_BRANCH }}/bootable/recovery
+        git remote add eidawon https://gitlab.com/eidawon/Recovery.git
+        git fetch eidawon
+        git cherry-pick 43bc742e39a2714cf9504bd167e11289c86d0ba4 || {
+          echo "Cherry-pick failed. Please resolve conflicts manually."
+          exit 1
+        }
+
     - name: Building OrangeFox
       run: |
         cd ${GITHUB_WORKSPACE}/OrangeFox/fox_${{ inputs.MANIFEST_BRANCH }}
