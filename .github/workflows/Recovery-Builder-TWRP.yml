@@ -69,6 +69,11 @@ jobs:
           echo "Manifest Branch: ${{ github.event.inputs.MANIFEST_BRANCH }}"
           echo "Device: ${{ github.event.inputs.DEVICE_NAME }}"
           echo "Build Target: ${{ github.event.inputs.BUILD_TARGET }}"
+          echo "Build Type: ${{ github.event.inputs.BUILD_TYPE }}"
+          echo "Device Tree: ${{ github.event.inputs.DEVICE_TREE }}"
+          echo "Device Tree Branch: ${{ github.event.inputs.DEVICE_TREE_BRANCH }}"
+          echo "Device Path: ${{ github.event.inputs.DEVICE_PATH }}"
+          echo "LDCHECK: ${{ github.event.inputs.LDCHECK }}"
 
       - name: Cleanup System
         uses: rokibhasansagar/slimhub_actions@main
