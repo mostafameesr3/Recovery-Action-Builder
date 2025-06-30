@@ -103,6 +103,11 @@ jobs:
           cd android-recovery
           repo sync -c -j$(nproc --all) --current-branch --force-sync --no-tags --no-clone-bundle --optimized-fetch --prune
 
+      - name: Revert Commit in bootable/recovery
+        run: |
+          cd android-recovery/bootable/recovery
+          git revert --no-edit c8f9364170e31cd08a4589b763ab622789ce7c31
+
       - name: Clone Device Tree
         run: |
           cd android-recovery
