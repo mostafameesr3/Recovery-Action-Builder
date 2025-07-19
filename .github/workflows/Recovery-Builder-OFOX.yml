@@ -150,7 +150,7 @@ jobs:
 
     - name: Cherry-pick custom OrangeFox recovery commit
       run: |
-        cd ${GITHUB_WORKSPACE}/OrangeFox/fox_${{ inputs.MANIFEST_BRANCH }}/bootable/recovery
+        cd ${GITHUB_WORKSPACE}/OrangeFox/fox_${{ inputs.MANIFEST_BRANCH }}/mostafameesr3/recovery
         git remote add mostafameesr3 https://gitlab.com/mostafameesr3/Recovery.git
         git fetch mostafameesr3
         git cherry-pick b1f342cdbabad5095c7402eb4fc83655c13686f4 || {
