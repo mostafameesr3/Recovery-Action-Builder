@@ -14,7 +14,7 @@ on:
       DEVICE_TREE:
         description: 'Custom Recovery Tree URL'
         required: true
-        default: 'https://github.com/Eida-at-22-00/twrp-device_xiaomi_sweet.git'
+        default: 'https://github.com/mostafameesr3/twrp-device_xiaomi_sweet.git'
       DEVICE_TREE_BRANCH:
         description: 'Device Tree Branch'
         required: true
