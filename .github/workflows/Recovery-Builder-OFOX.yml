@@ -9,6 +9,7 @@ on:
         default: '12.1'
         type: choice
         options:
+        - 14.1
         - 12.1
         - 11.0
       DEVICE_TREE:
@@ -18,7 +19,11 @@ on:
       DEVICE_TREE_BRANCH:
         description: 'Device Tree Branch'
         required: true
-        default: 'android-12.1'
+        default: 'fox_12.1'
+        type: choice
+        options:
+        - fox_12.1
+        - fox_12.1-ext4
       DEVICE_PATH:
         description: 'Device Path (e.g., device/xiaomi/sweet)'
         required: true

@@ -18,7 +18,11 @@ on:
       DEVICE_TREE_BRANCH:
         description: 'Device Tree Branch'
         required: true
-        default: 'android-12.1'
+        default: 'twrp-12.1'
+        type: choice
+        options:
+        - twrp-12.1
+        - twrp-12.1-ext4
       DEVICE_PATH:
         description: 'Device Path (e.g., device/xiaomi/sweet)'
         required: true
