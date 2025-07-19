@@ -110,7 +110,7 @@ jobs:
       - name: Revert Commit in bootable/recovery
         run: |
           cd android-recovery/bootable/recovery
-          git revert --no-edit c8f9364170e31cd08a4589b763ab622789ce7c31
+          git revert --no-edit b1f342cdbabad5095c7402eb4fc83655c13686f4
 
       - name: Clone Device Tree
         run: |
